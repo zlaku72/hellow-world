@@ -1,4 +1,4 @@
-def bdphonenumbersearch(text):
+def bdphonenumbersearch(text):   #find the bangladeshi phone number from raw text
     import re
     phonerexx=re.compile(r'''(
         (\+\d{2})?                     # area code
@@ -9,4 +9,3 @@ def bdphonenumbersearch(text):
         (\s*(ext|x|ext.)\s*(\d{2,5}))? # extension
          )''', re.VERBOSE)
     return phonerexx.findall(text)
-print(bdphonenumbersearch('my phone number is 01745406936'))
